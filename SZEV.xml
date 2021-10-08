@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="8450220f-793b-4388-961b-0820083878d5" activeEnvironment="Default" name="SZEV" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="8450220f-793b-4388-961b-0820083878d5" activeEnvironment="Default" name="SZEV" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
   <con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:entry key="Report Format(s)" value=""/>
   <con:entry key="Host:Port" value=""/>
@@ -1593,7 +1593,71 @@
             <con:entry>examinerExternalId</con:entry>
             <con:entry>status</con:entry>
           </con:parameterOrder>
-        </con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="4e02cda0-723d-4e28-8f58-00349a2d2b13" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés plannedEnd" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="58c24b71-9512-483f-9899-510c68f782c7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés examinerExternalId" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="859ebfca-859f-41a5-980b-16f93f82f6ba" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés status" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="68a17b8b-8d14-4692-99c6-e7bfda138c90" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés hibás status" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties>
+        </con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="4e02cda0-723d-4e28-8f58-00349a2d2b13" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés plannedEnd" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="58c24b71-9512-483f-9899-510c68f782c7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés examinerExternalId" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="859ebfca-859f-41a5-980b-16f93f82f6ba" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés status" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="68a17b8b-8d14-4692-99c6-e7bfda138c90" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés hibás status" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="69e8f484-a014-402a-922b-03bcb27b5248" name="Uj VJK"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="b39ee34b-5f3a-4bfe-87f2-49c0d07a939b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="35bb4cf5-1084-4b2e-abdb-662ee0c40128"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamReport" methodName="Vizsgajegyzőkönyv létrehozása" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="b3e8fc7f-48c3-4c71-992a-d5d5f5be7d17" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request>{
+  "examReportHeader": {
+    "examReportHeaderExternalId": "1122334456",
+    "location": "Kecskemet",
+    "registrationNumber": "AAA000",
+    "plannedEnd": "2021-11-11T12:00:00.000Z",
+    "plannedStart": "2021-11-11T11:00:00.000Z",
+    "registerDocuments": true
+  },
+  "examReportLines": [
+    {
+      "examReportLineExternalId": "1020304050",
+      "motherName": "Anyjaneve",
+      "documents": [
+        {
+          "examReportLineDocumentExternalId": "111222333",
+          "identifier": "Abc123",
+          "documentType": "utlevel",
+          "courseExternalId": "4f6449b9-564a-4b6e-ac34-955ac6337e52"
+        }
+      ],
+      "timeLimit": 60,
+      "namePrefix": "dr.",
+      "firstName": "Keresztnev",
+      "courses": [
+        {
+          "preconditions": [
+            0
+          ],
+          "timeLimit": 30,
+          "courseExternalId": "4f6449b9-564a-4b6e-ac34-955ac6337e52",
+          "sni": 0,
+          "ordinal": 0,
+          "title": "Kurzus Teszt",
+          "status": "ExamCourseWaitingForPreRegistration",
+          "skipNexiusStartPage": true
+        }
+      ],
+      "language": "Hungarian",
+      "placeOfBirth": "Budapest",
+      "timeOfBirth": "2021-10-08T12:28:45.916Z",
+      "plannedStart": "2021-11-11T11:00:00.000Z",
+      "surName": "Vezeteknev",
+      "examStation": "Vizsgaallomas neve",
+      "userExternalId": "9988776655",
+      "ordinal": 0
+    }
+  ]
+}</con:request>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders/ExamReport</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters><entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+          <con:parameterOrder>
+            <con:entry>systemId</con:entry>
+          </con:parameterOrder>
+        </con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties>
     <con:property>
       <con:name>examReportHeaderExternalId</con:name>
       <con:value/>
