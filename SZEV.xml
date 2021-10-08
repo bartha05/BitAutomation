@@ -1568,6 +1568,72 @@
           <con:parameterOrder>
             <con:entry>systemId</con:entry>
           </con:parameterOrder>
+        </con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e098251a-67d3-4274-87a9-b5cd58885785" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Copy of Vizsgajegyzőkönyv létrehozás" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="8366d9f5-d2ec-46a2-beea-f1cfbbd5010b"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamReport" methodName="Vizsgajegyzőkönyv létrehozása" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="b3e8fc7f-48c3-4c71-992a-d5d5f5be7d17" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request>{
+  "examReportHeader": {
+    "examReportHeaderExternalId": "MatekVizsga",
+    "location": "5700 Gyula Kossuth tér 1",
+    "registrationNumber": "1337",
+    "plannedEnd": "2021-10-13",
+    "plannedStart": "2021-10-11",
+    "registerDocuments": false
+  },
+  "examReportLines": [
+    {
+      "examReportLineExternalId": "${=java.util.UUID.randomUUID()}",
+      "motherName": "Kocsis Beatrix",
+      "documents": [
+        {
+          "examReportLineDocumentExternalId": "string",
+          "identifier": "string",
+          "documentType": "string",
+          "courseExternalId": "${=java.util.UUID.randomUUID()}"
+        }
+      ],
+      "timeLimit": 30,
+      "namePrefix": "elővizsga",
+      "firstName": "Bela",
+      "courses": [
+        {
+          "preconditions": [
+            0
+          ],
+          "timeLimit": 10,
+          "courseExternalId": "${=java.util.UUID.randomUUID()}",
+          "sni": 0,
+          "ordinal": 0,
+          "title": "Teszt adat",
+          "status": "ExamCourseWaitingForPreRegistration",
+          "skipNexiusStartPage": true
+        }
+      ],
+      "language": "Hungarian",
+      "placeOfBirth": "Budapest",
+      "timeOfBirth": "1990-10-07",
+      "plannedStart": "2021-10-14T14:50:31.509Z",
+      "surName": "Baka",
+      "examStation": "Terem",
+      "userExternalId": "TestUser",
+      "ordinal": 0
+    }
+  ]
+}</con:request>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders/ExamReport</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>systemId</con:entry>
+          </con:parameterOrder>
         </con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="38d31238-cf08-496b-b269-6a11b1996c84" name="Vizsgajegyzokony lekérdezése - /api/{systemId}/ExamReport/ExamReportHeaders"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="50eb69a0-8569-448e-9a0a-b869b8778956" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lerkédezés" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="4e02cda0-723d-4e28-8f58-00349a2d2b13" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés plannedEnd" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="58c24b71-9512-483f-9899-510c68f782c7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés examinerExternalId" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="859ebfca-859f-41a5-980b-16f93f82f6ba" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés status" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="68a17b8b-8d14-4692-99c6-e7bfda138c90" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés hibás status" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties>
     <con:property>
       <con:name>examReportHeaderExternalId</con:name>
