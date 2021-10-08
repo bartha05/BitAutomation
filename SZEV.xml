@@ -76,7 +76,7 @@
         </con:representation>
         <con:representation type="FAULT">
           <con:mediaType>application/problem+json; charset=utf-8</con:mediaType>
-          <con:status>500</con:status>
+          <con:status>500 400</con:status>
           <con:params/>
           <con:element xmlns:exam="https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders/ExamReport">exam:Fault</con:element>
         </con:representation>
@@ -84,7 +84,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request>{
   "examReportHeader": {
     "examReportHeaderExternalId": "string",
@@ -208,7 +208,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri>
           <con:credentials>
@@ -248,7 +248,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request>{
   "examReportHeaderExternalId": "string",
   "location": "string",
@@ -310,7 +310,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/123/ExamReport/ExamReportHeaders</con:originalUri>
           <con:credentials>
@@ -341,7 +341,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -405,7 +405,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request>{
   "examReportLines": [
     {
@@ -496,7 +496,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -532,7 +532,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -566,7 +566,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -606,7 +606,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -642,7 +642,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -678,7 +678,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -714,7 +714,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -750,7 +750,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -792,7 +792,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -834,7 +834,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportLines/examReportLineExternalId/ExamineeDocuments</con:originalUri>
           <con:credentials>
@@ -880,7 +880,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -916,7 +916,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -955,7 +955,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -985,7 +985,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request>{
 "comment": "string",
 "forced": true,
@@ -1034,7 +1034,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -1069,7 +1069,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request>{
 "examReportLineExternalIds": [
   "string"
@@ -1106,7 +1106,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request>{
 "examReportLineExternalIds": [
   "string"
@@ -1144,7 +1144,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request>{
 "examReportLineExternalIds": [
   "string"
@@ -1181,7 +1181,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request>{
 "examReportLineExternalIds": [
   "string"
@@ -1220,7 +1220,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request>{
 "examReportLineExternalIds": [
   "string"
@@ -1258,7 +1258,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request>{
 "entryDescription": "string",
 "examReportHeaderExternalId": "string",
@@ -1300,7 +1300,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -1330,7 +1330,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -1360,7 +1360,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -1396,7 +1396,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -1438,7 +1438,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -1474,7 +1474,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -1506,16 +1506,17 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
-          <con:request>{
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request>{ 
   "examReportHeader": {
-    "examReportHeaderExternalId": "MatekVizsga",
-    "location": "5700 Gyula Kossuth tér 1",
-    "registrationNumber": "1337",
-    "plannedEnd": "2021-10-13",
-    "plannedStart": "2021-10-11",
-    "registerDocuments": false
-  },
+    "examReportHeaderExternalId": "Vizsga-10_Külső_Id",
+    "location": "1131 budapest gyongyosi utca 21",
+    "registrationNumber": "ExamCenter_100",
+    "plannedEnd": "2021-10-10T11:32:26.156Z",
+    "plannedStart": "2021-10-08T11:32:26.156Z",
+    "registerDocuments": true
+  
+},
   "examReportLines": [
     {
       "examReportLineExternalId": "${=java.util.UUID.randomUUID()}",
@@ -1529,7 +1530,7 @@
         }
       ],
       "timeLimit": 30,
-      "namePrefix": "elővizsga",
+      "namePrefix": "elovizsga",
       "firstName": "Bela",
       "courses": [
         {
@@ -1568,7 +1569,31 @@
           <con:parameterOrder>
             <con:entry>systemId</con:entry>
           </con:parameterOrder>
-        </con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="38d31238-cf08-496b-b269-6a11b1996c84" name="Vizsgajegyzokony lekérdezése - /api/{systemId}/ExamReport/ExamReportHeaders"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="50eb69a0-8569-448e-9a0a-b869b8778956" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lerkédezés" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="4e02cda0-723d-4e28-8f58-00349a2d2b13" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés plannedEnd" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="58c24b71-9512-483f-9899-510c68f782c7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés examinerExternalId" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="859ebfca-859f-41a5-980b-16f93f82f6ba" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés status" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="68a17b8b-8d14-4692-99c6-e7bfda138c90" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés hibás status" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties>
+        </con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="38d31238-cf08-496b-b269-6a11b1996c84" name="Vizsgajegyzokony lekérdezése - /api/{systemId}/ExamReport/ExamReportHeaders"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="50eb69a0-8569-448e-9a0a-b869b8778956" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lerkédezés" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="3cbe4302-8e82-457b-9344-f79f8d820759"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamReport/ExamReportHeaders" methodName="Vizsgajegyzőkönyv fejlec lekérdezése" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="38fd4d4b-a23e-4e17-9891-5cb810f6d257" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+  <con:entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612"/>
+  <con:entry key="examReportHeaderExternalId" value="303f4f42-d7f8-4fbf-9de8-d79c94fd52d4"/>
+</con:parameters>
+          <con:parameterOrder>
+            <con:entry>systemId</con:entry>
+            <con:entry>examReportHeaderExternalId</con:entry>
+            <con:entry>plannedEnd</con:entry>
+            <con:entry>plannedStart</con:entry>
+            <con:entry>examinerExternalId</con:entry>
+            <con:entry>status</con:entry>
+          </con:parameterOrder>
+        </con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="4e02cda0-723d-4e28-8f58-00349a2d2b13" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés plannedEnd" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="58c24b71-9512-483f-9899-510c68f782c7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés examinerExternalId" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="859ebfca-859f-41a5-980b-16f93f82f6ba" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés status" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="68a17b8b-8d14-4692-99c6-e7bfda138c90" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés hibás status" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties>
     <con:property>
       <con:name>examReportHeaderExternalId</con:name>
       <con:value/>
