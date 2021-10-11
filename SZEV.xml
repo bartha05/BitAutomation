@@ -34,8 +34,8 @@
 </xml-fragment>]]></con:setting></con:settings>
   <con:interface xsi:type="con:RestService" id="f11ac806-5937-4fd5-8245-ae61067f460b" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://szevnexius.northeurope.cloudapp.azure.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:definitionCache/>
-    <con:endpoints>
+    
+    <con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
       <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
     </con:endpoints>
     <con:resource name="VJK létrehozása" path="/api/{systemId}/ExamReport" id="c0e0cd7d-3f04-41f8-99f6-00b96b890394">
@@ -80,56 +80,57 @@
           <con:params/>
           <con:element xmlns:exam="https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders/ExamReport">exam:Fault</con:element>
         </con:representation>
-        <con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="b3e8fc7f-48c3-4c71-992a-d5d5f5be7d17" mediaType="application/json" postQueryString="false">
+        <con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:exam="https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders/ExamReport">exam:Response</con:element></con:representation><con:request name="Request 1" id="b3e8fc7f-48c3-4c71-992a-d5d5f5be7d17" mediaType="application/json" postQueryString="false">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
           <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request>{
   "examReportHeader": {
-    "examReportHeaderExternalId": "string",
-    "location": "string",
-    "registrationNumber": "string",
-    "plannedEnd": "2021-10-07T14:50:31.509Z",
-    "plannedStart": "2021-10-07T14:50:31.509Z",
-    "registerDocuments": true
+    "examReportHeaderExternalId": "${=java.util.UUID.randomUUID()}",
+    "location": "Kecskemét",
+    "registrationNumber": "AAA000",
+    "plannedEnd": "2021-11-14T15:30:00.000Z",
+    "plannedStart": "2021-11-14T14:00:00.000Z",
+    "registerDocuments": true,
+    "start": "Automatic"
   },
   "examReportLines": [
     {
-      "examReportLineExternalId": "string",
-      "motherName": "string",
+      "examReportLineExternalId": "${=java.util.UUID.randomUUID()}",
+      "motherName": "Anyjaneve",
       "documents": [
         {
-          "examReportLineDocumentExternalId": "string",
-          "identifier": "string",
-          "documentType": "string",
-          "courseExternalId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+          "examReportLineDocumentExternalId": "${=java.util.UUID.randomUUID()}",
+          "identifier": "Abc123",
+          "documentType": "utlevel",
+          "courseExternalId": "4f6449b9-564a-4b6e-ac34-955ac6337e52"
         }
       ],
-      "timeLimit": 0,
-      "namePrefix": "string",
-      "firstName": "string",
+      "timeLimit": 90,
+      "namePrefix": "dr.",
+      "firstName": "Keresztnev",
       "courses": [
         {
           "preconditions": [
             0
           ],
-          "timeLimit": 0,
-          "courseExternalId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "timeLimit": 90,
+          "courseExternalId": "4f6449b9-564a-4b6e-ac34-955ac6337e52",
           "sni": 0,
           "ordinal": 0,
-          "title": "string",
+          "title": "Kurzus Teszt 4.",
           "status": "ExamCourseWaitingForPreRegistration",
           "skipNexiusStartPage": true
         }
       ],
       "language": "Hungarian",
-      "placeOfBirth": "string",
-      "timeOfBirth": "2008-10-07T14:50:31.509Z",
-      "plannedStart": "2021-10-07T14:50:31.509Z",
-      "surName": "string",
-      "examStation": "string",
-      "userExternalId": "string",
+      "placeOfBirth": "Budapest",
+      "timeOfBirth": "2001-10-01T01:10:00.000Z",
+      "plannedStart": "2021-10-14T14:00:00.000Z",
+      "surName": "Vezeteknev",
+      "examStation": "Vizsgaallomas",
+      "userExternalId": "99988776655",
       "ordinal": 0
     }
   ]
@@ -401,7 +402,7 @@
       <con:method name="VJK sor lekérdezése" id="cc07d819-78bc-4c11-8033-e46c27721adb" method="GET">
         <con:settings/>
         <con:parameters/>
-        <con:request name="Request 1" id="7e3212c8-41a5-45a5-b22a-a3b0d93d5237" mediaType="application/json" postQueryString="false">
+        <con:representation type="FAULT"><con:mediaType>text/plain; charset=utf-8</con:mediaType><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:exam="https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders/examReportHeaderExternalId/ExamReportLines">exam:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/problem+json; charset=utf-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:exam="https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders/examReportHeaderExternalId/ExamReportLines">exam:Fault</con:element></con:representation><con:request name="Request 1" id="7e3212c8-41a5-45a5-b22a-a3b0d93d5237" mediaType="application/json" postQueryString="false">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
@@ -492,7 +493,7 @@
       <con:method name="VJK sorok fogadása" id="4b196f76-3779-4772-bbd7-6b76f3b04743" method="POST">
         <con:settings/>
         <con:parameters/>
-        <con:request name="Request 1" id="aa0a5ea2-66c7-4b53-b644-cfc7cff41620" mediaType="application/json" postQueryString="false">
+        <con:representation type="FAULT"><con:mediaType>application/problem+json; charset=utf-8</con:mediaType><con:status>400 500</con:status><con:params/><con:element xmlns:exam="https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders/Vizsga-1_K%C3%BCls%C5%91_Id/ExamReportLines">exam:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="aa0a5ea2-66c7-4b53-b644-cfc7cff41620" mediaType="application/json" postQueryString="false">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
@@ -638,7 +639,7 @@
       <con:method name="Method 1" id="f7189427-1850-4d06-9ea1-fc0b19b57af4" method="GET">
         <con:settings/>
         <con:parameters/>
-        <con:request name="Request 1" id="7de49a80-6e71-4fd8-87ff-359cc4227475" mediaType="application/json">
+        <con:representation type="FAULT"><con:mediaType>application/problem+json; charset=utf-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:exam="https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportLineLastAlert/examReportHeaderExternalId">exam:Fault</con:element></con:representation><con:request name="Request 1" id="7de49a80-6e71-4fd8-87ff-359cc4227475" mediaType="application/json">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
@@ -674,7 +675,7 @@
       <con:method name="Vizsgabiztos lekérdezése" id="7a1d0c0a-02d0-405b-8479-c50b605bc3b7" method="GET">
         <con:settings/>
         <con:parameters/>
-        <con:request name="Request 1" id="5926b1ab-04fe-4263-a29a-0ce683f6f8fd" mediaType="application/json">
+        <con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:exam="https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders/Vizsga-1_K%C3%BCls%C5%91_Id/ExaminerAssignments">exam:Response</con:element></con:representation><con:request name="Request 1" id="5926b1ab-04fe-4263-a29a-0ce683f6f8fd" mediaType="application/json">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
@@ -830,7 +831,7 @@
           <con:params/>
           <con:element xmlns:exam="https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportLines/examReportLineExternalId/ExamineeDocuments">exam:Fault</con:element>
         </con:representation>
-        <con:request name="Request 1" id="dbcd3877-1ab5-4ae6-a0f9-3ff12dd6157b" mediaType="application/json">
+        <con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="dbcd3877-1ab5-4ae6-a0f9-3ff12dd6157b" mediaType="application/json">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
@@ -876,7 +877,7 @@
       <con:method name="Következő indítható vizsgakurzus lekérdezése" id="9b778859-3c2e-4205-baa9-0b82551ac434" method="GET">
         <con:settings/>
         <con:parameters/>
-        <con:request name="NextCourse" id="b565beb0-0ca0-47c9-9ebd-6a6e53630ce8" mediaType="application/json">
+        <con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="NextCourse" id="b565beb0-0ca0-47c9-9ebd-6a6e53630ce8" mediaType="application/json">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
@@ -912,13 +913,13 @@
       <con:method name="Munkaállomás azonosító lekérdezése" id="9e70fa34-edc1-444a-953e-7f8a65b4d4d0" method="GET">
         <con:settings/>
         <con:parameters/>
-        <con:request name="WorkstationId" id="5930e005-39e3-4685-814d-9c2ca4519823" mediaType="application/json">
+        <con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="WorkstationId" id="5930e005-39e3-4685-814d-9c2ca4519823" mediaType="application/json">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
           <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
-          <con:credentials>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/</con:originalUri><con:credentials>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
           <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -932,7 +933,7 @@
         </con:request>
       </con:method>
     </con:resource>
-    <con:resource name="WorkStationQRCode" path="/api/{systemId}/ExamPreparation/WorkstationQRCode/{workstationId}" id="cb411cea-cdf4-4003-b7e1-8db8dcab019a">
+    <con:resource name="Munkaállomás QR kód generálás" path="/api/{systemId}/ExamPreparation/WorkstationQRCode/{workstationId}" id="cb411cea-cdf4-4003-b7e1-8db8dcab019a">
       <con:settings/>
       <con:parameters>
         <con:parameter>
@@ -948,10 +949,10 @@
           <con:default>workstationId</con:default>
         </con:parameter>
       </con:parameters>
-      <con:method name="Method 1" id="e8be7ad1-a474-4dca-8e7b-cfd7ebba3be7" method="GET">
+      <con:method name="Munkaállomás QR kód generálás" id="e8be7ad1-a474-4dca-8e7b-cfd7ebba3be7" method="GET">
         <con:settings/>
         <con:parameters/>
-        <con:request name="Request 1" id="9b4b542e-d668-4504-972f-8a3d1872fa89" mediaType="application/json">
+        <con:representation type="FAULT"><con:mediaType>application/problem+json; charset=utf-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:wor="https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamPreparation/WorkstationQRCode/workstationId">wor:Fault</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="9b4b542e-d668-4504-972f-8a3d1872fa89" mediaType="application/json">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
@@ -968,7 +969,7 @@
         </con:request>
       </con:method>
     </con:resource>
-    <con:resource name="Munkaállomás QR kód generálás" path="/api/{systemId}/ExamPreparation/DocumentRegistrationClose" id="0ad84ec1-0609-450c-baec-3d9e3785fed5">
+    <con:resource name="Adatrögzítés vége" path="/api/{systemId}/ExamPreparation/DocumentRegistrationClose" id="0ad84ec1-0609-450c-baec-3d9e3785fed5">
       <con:settings/>
       <con:parameters>
         <con:parameter>
@@ -978,7 +979,7 @@
           <con:default>systemId</con:default>
         </con:parameter>
       </con:parameters>
-      <con:method name="Munkaállomás QR kód generálás" id="63914702-0c58-4be0-8701-72f610d6d312" method="POST">
+      <con:method name="Adatrögzítés vége" id="63914702-0c58-4be0-8701-72f610d6d312" method="POST">
         <con:settings/>
         <con:parameters/>
         <con:request name="Request 1" id="13557c6b-3090-4b23-8b2d-225ef028c0d5" mediaType="application/json" postQueryString="false">
@@ -1065,7 +1066,7 @@
       <con:method name="Vizsga indítása" id="37a42932-22be-475d-bc8b-be88c9ce11f2" method="POST">
         <con:settings/>
         <con:parameters/>
-        <con:request name="Request 1" id="6a759d95-85f0-4f12-8eff-a2a58915e47e" mediaType="application/json" postQueryString="false">
+        <con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/problem+json; charset=utf-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:exam="https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamManagement/ExamStart">exam:Fault</con:element></con:representation><con:request name="Request 1" id="6a759d95-85f0-4f12-8eff-a2a58915e47e" mediaType="application/json" postQueryString="false">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
@@ -1102,7 +1103,7 @@
       <con:method name="Vizsga szüneteltetése" id="d5100091-189a-4642-8a49-1086ce57fccc" method="POST">
         <con:settings/>
         <con:parameters/>
-        <con:request name="Request 1" id="7c5bb714-84ac-4305-bea2-81256bbdf269" mediaType="application/json" postQueryString="false">
+        <con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/problem+json; charset=utf-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:exam="https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamManagement/ExamPause">exam:Fault</con:element></con:representation><con:request name="Request 1" id="7c5bb714-84ac-4305-bea2-81256bbdf269" mediaType="application/json" postQueryString="false">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
@@ -1140,7 +1141,7 @@
       <con:method name="Vizsga folytatása" id="158c957f-78d5-408f-ac7d-f774d1742f60" method="POST">
         <con:settings/>
         <con:parameters/>
-        <con:request name="Request 1" id="dbfa475e-3907-4803-a3a3-0df3ad54cdf7" mediaType="application/json" postQueryString="false">
+        <con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/problem+json; charset=utf-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:exam="https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamManagement/ExamResume">exam:Fault</con:element></con:representation><con:request name="Request 1" id="dbfa475e-3907-4803-a3a3-0df3ad54cdf7" mediaType="application/json" postQueryString="false">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
@@ -1177,7 +1178,7 @@
       <con:method name="Vizsga fejfüggesztése" id="7efa382f-6b7e-4f40-8228-9ec138d66a9d" method="POST">
         <con:settings/>
         <con:parameters/>
-        <con:request name="Request 1" id="c520a6de-4cc3-4285-8234-a77d5778b18a" mediaType="application/json" postQueryString="false">
+        <con:representation type="FAULT"><con:mediaType>application/problem+json; charset=utf-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:exam="https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamManagement/ExamClose">exam:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="c520a6de-4cc3-4285-8234-a77d5778b18a" mediaType="application/json" postQueryString="false">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
@@ -1296,7 +1297,7 @@
       <con:method name="Kódtár lekérdezése" id="6ce467b4-6b54-4def-8828-1442f85fbab2" method="GET">
         <con:settings/>
         <con:parameters/>
-        <con:request name="Request 1" id="ac0bfa64-1f5b-4e20-a8ba-093909bc675e" mediaType="application/json">
+        <con:representation type="FAULT"><con:mediaType>application/problem+json; charset=utf-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:item="https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/Dictionaries/code/items">item:Fault</con:element></con:representation><con:request name="Request 1" id="ac0bfa64-1f5b-4e20-a8ba-093909bc675e" mediaType="application/json">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
@@ -1326,7 +1327,7 @@
       <con:method name="Kurzusok lekérdezése" id="a86fec2b-299e-46c6-a9d1-c05fc262fe1d" method="GET">
         <con:settings/>
         <con:parameters/>
-        <con:request name="Request 1" id="8353179f-7551-4dfa-9155-adf845aacb6b" mediaType="application/json">
+        <con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cour="https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/Courses/Courses">cour:Response</con:element></con:representation><con:request name="Request 1" id="8353179f-7551-4dfa-9155-adf845aacb6b" mediaType="application/json">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
@@ -1392,7 +1393,7 @@
       <con:method name="Vizsgajegyzőkönyv kurzusok listázása" id="280d7e3b-654d-4a5c-83f5-427211058870" method="GET">
         <con:settings/>
         <con:parameters/>
-        <con:request name="Request 1" id="02f34c68-58ea-4c0c-9004-ae387f030821" mediaType="application/json">
+        <con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:exam="https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportLines/Vizsga1_vizsgasor/ExamReportCourses">exam:Response</con:element></con:representation><con:request name="Request 1" id="02f34c68-58ea-4c0c-9004-ae387f030821" mediaType="application/json">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
@@ -1488,13 +1489,13 @@
       </con:method>
     </con:resource>
   </con:interface>
-  <con:testSuite id="623673de-fe3b-44f2-89c4-44c6ea1e1b4d" name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="2c7eb4b8-ce05-438f-b98a-53cecae29f3f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="7584a868-28c9-467e-8c43-05273dfde435"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/Health/Check" methodName="Rendelkezésre állás" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="b6c06beb-a6b6-4df2-b5e6-05423aa387a1" mediaType="application/json">
+  <con:testSuite id="623673de-fe3b-44f2-89c4-44c6ea1e1b4d" name="HealthCheck Test"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="2c7eb4b8-ce05-438f-b98a-53cecae29f3f" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Check GET endpoints" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:testStep type="restrequest" name="Check System" id="7584a868-28c9-467e-8c43-05273dfde435"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/Health/Check" methodName="Rendelkezésre állás" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check System" id="b6c06beb-a6b6-4df2-b5e6-05423aa387a1" mediaType="application/json">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
           <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
-          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/Health/Check</con:originalUri><con:credentials>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/Health/Check</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="4abe0bbc-4dd3-4beb-88fd-49e43c105b70" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="032525c3-6243-4f4f-8b6f-fc767b474431" name="Contains"><con:configuration><token>true</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
           <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -1502,7 +1503,452 @@
           <con:parameters>
             <entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612" xmlns="http://eviware.com/soapui/config"/>
           </con:parameters>
-        </con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="feee5f3a-954e-4c35-8fef-ffe257451106" name="Vizsgajegyzőkönyv létrehozása"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="f3ece056-7e79-4092-a915-4b1049975155" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Vizsgajegyzőkönyv létrehozás" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="4a3af060-3129-44cb-b5c0-2a6295f94d54"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamReport" methodName="Vizsgajegyzőkönyv létrehozása" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="b3e8fc7f-48c3-4c71-992a-d5d5f5be7d17" mediaType="application/json" postQueryString="false">
+        </con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Check VJK fejléc" id="75bf56d0-d6bd-4532-a4f2-4fd007ba05e2"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamReport/ExamReportHeaders" methodName="Vizsgajegyzőkönyv fejlec lekérdezése" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check VJK fejléc" id="38fd4d4b-a23e-4e17-9891-5cb810f6d257" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri>
+          <con:assertion type="Valid HTTP Status Codes" id="19d71fe5-c38b-4eb6-aac1-9d11a51f8130" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="082f21f3-feea-4714-bfdf-c8fc79a91e00" name="Contains"><con:configuration><token>items</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>systemId</con:entry>
+            <con:entry>examReportHeaderExternalId</con:entry>
+            <con:entry>plannedEnd</con:entry>
+            <con:entry>plannedStart</con:entry>
+            <con:entry>examinerExternalId</con:entry>
+            <con:entry>status</con:entry>
+          </con:parameterOrder>
+        </con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="Save examReportHeaderExternalId" id="c11a7f3d-ef10-4cd4-8995-dd651fff280c"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>ERHEI</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Check VJK fejléc</con:sourceStep><con:sourcePath>$..examReportHeaderExternalId[0]</con:sourcePath><con:targetType>examReportHeaderExternalId</con:targetType><con:targetStep>#Project#</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Check VJK sor" id="8ad3be2e-e6c0-42ed-8edd-65a42fe1516d"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamReport/ExamReportHeaders/{examReportHeaderExternalId}/ExamReportLines" methodName="VJK sor lekérdezése" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check VJK sor" id="7e3212c8-41a5-45a5-b22a-a3b0d93d5237" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request>{
+  "examReportLines": [
+    {
+      "examReportLineExternalId": "string",
+      "motherName": "string",
+      "documents": [
+        {
+          "examReportLineDocumentExternalId": "string",
+          "identifier": "string",
+          "documentType": "string",
+          "courseExternalId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+        }
+      ],
+      "timeLimit": 0,
+      "namePrefix": "string",
+      "firstName": "string",
+      "courses": [
+        {
+          "preconditions": [
+            0
+          ],
+          "timeLimit": 0,
+          "courseExternalId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "sni": 0,
+          "ordinal": 0,
+          "title": "string",
+          "status": "ExamCourseWaitingForPreRegistration",
+          "skipNexiusStartPage": true
+        }
+      ],
+      "language": "Hungarian",
+      "placeOfBirth": "string",
+      "timeOfBirth": "2021-10-07T15:23:58.334Z",
+      "plannedStart": "2021-10-07T15:23:58.334Z",
+      "surName": "string",
+      "examStation": "string",
+      "userExternalId": "string",
+      "ordinal": 0
+    }
+  ]
+}
+</con:request>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders/examReportHeaderExternalId/ExamReportLines</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="a0b832da-4565-4c4e-bc74-a7ea4638c584" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="1d818c0f-e965-4670-9c01-2ec696536543" name="Contains"><con:configuration><token>items</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+  <con:entry key="textFilter" value=""/>
+  <con:entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612"/>
+  <con:entry key="registrationNumber" value=""/>
+  <con:entry key="examReportLineExternalId" value=""/>
+  <con:entry key="examReportHeaderExternalId" value="${#Project#examReportHeaderExternalId}"/>
+  <con:entry key="plannedStart" value=""/>
+  <con:entry key="status" value=""/>
+</con:parameters>
+          <con:parameterOrder>
+            <con:entry>systemId</con:entry>
+            <con:entry>examReportHeaderExternalId</con:entry>
+            <con:entry>examReportLineExternalId</con:entry>
+            <con:entry>plannedStart</con:entry>
+            <con:entry>status</con:entry>
+            <con:entry>registrationNumber</con:entry>
+            <con:entry>textFilter</con:entry>
+          </con:parameterOrder>
+        </con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="Save examReportLineExternalId" id="3c34fbe3-dca4-4b04-95e3-17b36a1f3fe8"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="true"><con:name>examReportLineExternalId</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Check VJK sor</con:sourceStep><con:sourcePath>$..examReportLineExternalId[0]</con:sourcePath><con:targetType>examReportLineExternalId</con:targetType><con:targetStep>#Project#</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Check LastAlert" id="56211fc2-83dd-4a23-811f-bd2ea5662b36"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamReport/ExamReportLineLastAlert/{examReportHeaderExternalId}" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check LastAlert" id="7de49a80-6e71-4fd8-87ff-359cc4227475" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportLineLastAlert/examReportHeaderExternalId</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="02513e7d-47b2-424c-a454-4b0c6f395848" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="b4009b9d-1d0a-4a74-9461-789b0d91040f" name="Contains"><con:configuration><token>lastAlert</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+  <con:entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612"/>
+  <con:entry key="examReportHeaderExternalId" value="${#Project#examReportHeaderExternalId}"/>
+</con:parameters>
+        </con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Check Vizsgabiztos" id="b98146b0-9f99-4799-90e1-e96a09849be8"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamReport/ExamReportHeaders/{examReportHeaderExternalId}/ExaminerAssignments" methodName="Vizsgabiztos lekérdezése" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check Vizsgabiztos" id="5926b1ab-04fe-4263-a29a-0ce683f6f8fd" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders/Vizsga-1_K%C3%BCls%C5%91_Id/ExaminerAssignments</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="aff4ba41-bf46-4c01-85b6-098900ec25ee" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="816ca4c1-f349-463f-ba43-662634e6494b" name="Contains"><con:configuration><token>items</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+  <con:entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612"/>
+  <con:entry key="examReportHeaderExternalId" value="${#Project#examReportHeaderExternalId}"/>
+</con:parameters>
+        </con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Check Vizsgázó Dokumentumok" id="b19119cd-0164-4d3e-97c9-a9d238155fd9"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamReport/ExamReportLines/{examReportLineExternalId}/ExamineeDocuments" methodName="Vizsgázó dokumentumok listázása" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check Vizsgázó Dokumentumok" id="dbcd3877-1ab5-4ae6-a0f9-3ff12dd6157b" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportLines/examReportLineExternalId/ExamineeDocuments</con:originalUri>
+          <con:assertion type="Valid HTTP Status Codes" id="44cd5ad8-0663-4c91-9126-5194d39282d1" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="a96fd850-1620-4d0c-9a9d-43df1732cb1d" name="Contains"><con:configuration><token>items</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+  <con:entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612"/>
+  <con:entry key="examReportLineExternalId" value="${#Project#examReportLineExternalId}"/>
+</con:parameters>
+        </con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Check VJK Kurzusok" id="1833886b-9a7d-4ac2-b521-f702bb48d784"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamReport/ExamReportLines/{examReportLineExternalId}/ExamReportCourses" methodName="Vizsgajegyzőkönyv kurzusok listázása" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check VJK Kurzusok" id="02f34c68-58ea-4c0c-9004-ae387f030821" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportLines/Vizsga1_vizsgasor/ExamReportCourses</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="5eadf5e0-c4cc-4325-9635-e4bd8f28c330" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="08e2417c-099a-4d0d-ab78-d3f8933300aa" name="Contains"><con:configuration><token>items</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+  <con:entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612"/>
+  <con:entry key="examReportLineExternalId" value="${#Project#examReportLineExternalId}"/>
+</con:parameters>
+        </con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Check Kurzusok" id="81e5e7e5-f2e9-43d6-ac3c-97e85457db5b"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/Courses/Courses" methodName="Kurzusok lekérdezése" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check Kurzusok" id="8353179f-7551-4dfa-9155-adf845aacb6b" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/Courses/Courses</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="9bee4e77-a2be-48cd-addb-ebb1e95eb486" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="c5e5680e-b829-4991-920e-222bb2ff1663" name="Contains"><con:configuration><token>items</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Check Kódtár" id="90d6617e-8880-4614-bc4f-930682d01bc4"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/Dictionaries/{code}/items" methodName="Kódtár lekérdezése" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check Kódtár" id="ac0bfa64-1f5b-4e20-a8ba-093909bc675e" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/Dictionaries/code/items</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="4a719a18-c844-46b5-9d2f-380fae7fd873" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="6275dc19-c1bc-4625-9b4a-426bca8053bb" name="Contains"><con:configuration><token>items</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+  <con:entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612"/>
+  <con:entry key="code" value="1"/>
+</con:parameters>
+        </con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Check Következő indítható vizsgakurzus" id="f09b81d3-37c5-4fba-b9d2-2db993a0dbfb"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamPreparation/NextCourse" methodName="Következő indítható vizsgakurzus lekérdezése" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check Következő indítható vizsgakurzus" id="b565beb0-0ca0-47c9-9ebd-6a6e53630ce8" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="985b5b6b-704b-45ad-a959-5c7b91b9af9c" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="b08b8cd2-136c-4f3f-9fdc-2e8f23a0da96" name="Contains"><con:configuration><token>courseId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+  <con:entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612"/>
+  <con:entry key="examReportLineExternalId" value="${#Project#examReportHeaderExternalId}"/>
+  <con:entry key="examReportHeaderExternalId" value="${#Project#examReportHeaderExternalId}"/>
+</con:parameters>
+          <con:parameterOrder>
+            <con:entry>systemId</con:entry>
+            <con:entry>examReportLineExternalId</con:entry>
+            <con:entry>examReportHeaderExternalId</con:entry>
+          </con:parameterOrder>
+        </con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Check Munkaállomás" id="f9427e77-7e03-40d6-811f-c2612f3bab1b"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamPreparation/WorkstationId" methodName="Munkaállomás azonosító lekérdezése" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check Munkaállomás" id="5930e005-39e3-4685-814d-9c2ca4519823" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="74cd4540-e1cc-4850-b6e8-b5077ef1921d" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="e81dec3d-6533-47b0-b170-371ea0e053e9" name="Contains"><con:configuration><token>workstationId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="systemId " value="9fb37faa-1483-47a7-9192-033a2269a612" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>systemId </con:entry>
+          </con:parameterOrder>
+        </con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="Save workstationId" id="83003bec-09c0-4b80-9afb-3bca06448057"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>workstationId</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Check Munkaállomás</con:sourceStep><con:sourcePath>$..workstationId</con:sourcePath><con:targetType>workstationId</con:targetType><con:targetStep>#Project#</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Check Munkaállomás QR" id="b5beae2d-e016-46cd-9895-9c8aadd4dca3"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamPreparation/WorkstationQRCode/{workstationId}" methodName="Munkaállomás QR kód generálás" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check Munkaállomás QR" id="9b4b542e-d668-4504-972f-8a3d1872fa89" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamPreparation/WorkstationQRCode/workstationId</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="35c8b371-6555-402b-a78b-df1d3f00e92b" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+  <con:entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612"/>
+  <con:entry key="workstationId" value="${#Project#workstationId}"/>
+</con:parameters>
+        </con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2fed5024-a169-4046-8b6a-57d55f74ef79" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Check POST endpoints" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Check VJK" id="db335958-ed1d-4f70-b20e-01bfd5406aa7"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamReport" methodName="Vizsgajegyzőkönyv létrehozása" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check VJK" id="b3e8fc7f-48c3-4c71-992a-d5d5f5be7d17" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request>{
+  "examReportHeader": {
+    "examReportHeaderExternalId": "${=java.util.UUID.randomUUID()}",
+    "location": "Kecskemét",
+    "registrationNumber": "AAA000",
+    "plannedEnd": "2021-11-14T15:30:00.000Z",
+    "plannedStart": "2021-11-14T14:00:00.000Z",
+    "registerDocuments": true,
+    "start": "Automatic"
+  },
+  "examReportLines": [
+    {
+      "examReportLineExternalId": "${=java.util.UUID.randomUUID()}",
+      "motherName": "Anyjaneve",
+      "documents": [
+        {
+          "examReportLineDocumentExternalId": "${=java.util.UUID.randomUUID()}",
+          "identifier": "Abc123",
+          "documentType": "utlevel",
+          "courseExternalId": "4f6449b9-564a-4b6e-ac34-955ac6337e52"
+        }
+      ],
+      "timeLimit": 90,
+      "namePrefix": "dr.",
+      "firstName": "Keresztnev",
+      "courses": [
+        {
+          "preconditions": [
+            0
+          ],
+          "timeLimit": 90,
+          "courseExternalId": "4f6449b9-564a-4b6e-ac34-955ac6337e52",
+          "sni": 0,
+          "ordinal": 0,
+          "title": "Kurzus Teszt 4.",
+          "status": "ExamCourseWaitingForPreRegistration",
+          "skipNexiusStartPage": true
+        }
+      ],
+      "language": "Hungarian",
+      "placeOfBirth": "Budapest",
+      "timeOfBirth": "2001-10-01T01:10:00.000Z",
+      "plannedStart": "2021-10-14T14:00:00.000Z",
+      "surName": "Vezeteknev",
+      "examStation": "Vizsgaallomas",
+      "userExternalId": "99988776655",
+      "ordinal": 0
+    }
+  ]
+}</con:request>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders/ExamReport</con:originalUri>
+          <con:assertion type="Valid HTTP Status Codes" id="9ebcab03-1051-4b71-9544-5cce6a18fef4" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>systemId</con:entry>
+          </con:parameterOrder>
+        </con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Check VJK sorok fogadasa" id="b59494b0-f731-4098-81f5-e7f94361eafe"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamReport/ExamReportHeaders/{examReportHeaderExternalId}/ExamReportLines" methodName="VJK sorok fogadása" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check VJK sorok fogadása" id="aa0a5ea2-66c7-4b53-b644-cfc7cff41620" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request>{
+  "examReportLines": [
+    {
+      "examReportLineExternalId": "${=java.util.UUID.randomUUID()}",
+      "motherName": "Anyjaneve",
+      "documents": [
+        {
+          "examReportLineDocumentExternalId": "${=java.util.UUID.randomUUID()}",
+          "identifier": "Abc123",
+          "documentType": "utlevel",
+          "courseExternalId": "4f6449b9-564a-4b6e-ac34-955ac6337e52"
+        }
+      ],
+      "timeLimit": 90,
+      "namePrefix": "dr.",
+      "firstName": "Keresztnev",
+      "courses": [
+        {
+          "preconditions": [
+            0
+          ],
+          "timeLimit": 90,
+          "courseExternalId": "4f6449b9-564a-4b6e-ac34-955ac6337e52",
+          "sni": 0,
+          "ordinal": 0,
+          "title": "Kurzus Teszt 4.",
+          "status": "ExamCourseWaitingForPreRegistration",
+          "skipNexiusStartPage": true
+        }
+      ],
+      "language": "Hungarian",
+      "placeOfBirth": "Budapest",
+      "timeOfBirth": "2001-10-01T01:10:00.000Z",
+      "plannedStart": "2021-10-14T14:00:00.000Z",
+      "surName": "Vezeteknev",
+      "examStation": "Vizsgaallomas",
+      "userExternalId": "99988776655",
+      "ordinal": 0
+    }
+  ]
+}</con:request>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders/Vizsga-1_K%C3%BCls%C5%91_Id/ExamReportLines</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="bad6593c-0ace-417b-a02e-fc059c52cc5a" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+  <con:entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612"/>
+  <con:entry key="examReportHeaderExternalId" value="${#Project#examReportHeaderExternalId}"/>
+</con:parameters>
+        </con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Check Vizsga inditas" id="c6044a1f-7071-4188-b332-8129cdfd6b52"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamManagement/ExamStart" methodName="Vizsga indítása" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check Vizsga inditasa" id="6a759d95-85f0-4f12-8eff-a2a58915e47e" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request>{
+"examReportLineExternalIds": [
+  "${=java.util.UUID.randomUUID()}"
+],
+"examEvent": {
+  "entryDescription": "valami leiras"
+}
+}</con:request>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamManagement/ExamStart</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="f62bb584-4ade-4ec1-841d-112c754a8b04" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Check Vizsga szunet" id="d4cbad4e-ffe4-4b67-bf21-67640dd402c4"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamManagement/ExamPause" methodName="Vizsga szüneteltetése" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check Vizsga szunet" id="7c5bb714-84ac-4305-bea2-81256bbdf269" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request>{
+"examReportLineExternalIds": [
+  "${=java.util.UUID.randomUUID()}"
+],
+"examEvent": {
+  "entryDescription": "valami leiras"
+},
+"time": true
+}</con:request>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamManagement/ExamPause</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="cc96c12b-4925-4662-8abe-a9bb8ffa837e" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Check Vizsga folytat" id="2794bdc2-2898-44ee-9c7a-794a081a5643"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamManagement/ExamResume" methodName="Vizsga folytatása" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check Vizsga folytat" id="dbfa475e-3907-4803-a3a3-0df3ad54cdf7" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request>{
+"examReportLineExternalIds": [
+  "${=java.util.UUID.randomUUID()}"
+],
+"examEvent": {
+  "entryDescription": "valami leiras"
+}
+}</con:request>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamManagement/ExamResume</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="032d3f8e-6dd3-47d2-9a1a-78ff82899362" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Check Vizsga felfuggeszt" id="bb2b7f4e-a7d1-40b3-949c-7d82238cce5c"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamManagement/ExamClose" methodName="Vizsga fejfüggesztése" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check Vizsga felfüggesztése" id="c520a6de-4cc3-4285-8234-a77d5778b18a" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
+          <con:request>{
+"examReportLineExternalIds": [
+  "${=java.util.UUID.randomUUID()}"
+],
+"examEvent": {
+  "entryDescription": "valami leiras"
+},
+"stopAllExamCourses": true,
+"examSuspensionReason": "SuspenedDueToCandidatesFault"
+}</con:request>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamManagement/ExamClose</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="35aec09d-12c1-4ccc-91e6-a5ee24450f07" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="9408ff45-8075-42e2-9dba-750cad7ad5cb" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Check PUT endpoints" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="b3c3212e-cc20-443b-a311-b9a053dd7575" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Check PATCH endpoints" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="60fa8644-602a-43ec-a473-b8f481e535ae" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Check DELETE endpoints" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="feee5f3a-954e-4c35-8fef-ffe257451106" name="Vizsgajegyzőkönyv létrehozása"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="f3ece056-7e79-4092-a915-4b1049975155" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Vizsgajegyzőkönyv létrehozás" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="4a3af060-3129-44cb-b5c0-2a6295f94d54"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamReport" methodName="Vizsgajegyzőkönyv létrehozása" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="b3e8fc7f-48c3-4c71-992a-d5d5f5be7d17" mediaType="application/json" postQueryString="false">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
@@ -1593,28 +2039,30 @@
             <con:entry>examinerExternalId</con:entry>
             <con:entry>status</con:entry>
           </con:parameterOrder>
-        </con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="4e02cda0-723d-4e28-8f58-00349a2d2b13" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés plannedEnd" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="58c24b71-9512-483f-9899-510c68f782c7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés examinerExternalId" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="859ebfca-859f-41a5-980b-16f93f82f6ba" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés status" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="68a17b8b-8d14-4692-99c6-e7bfda138c90" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés hibás status" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="69e8f484-a014-402a-922b-03bcb27b5248" name="Uj VJK"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="b39ee34b-5f3a-4bfe-87f2-49c0d07a939b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="35bb4cf5-1084-4b2e-abdb-662ee0c40128"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamReport" methodName="Vizsgajegyzőkönyv létrehozása" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="b3e8fc7f-48c3-4c71-992a-d5d5f5be7d17" mediaType="application/json" postQueryString="false">
+        </con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="4e02cda0-723d-4e28-8f58-00349a2d2b13" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés plannedEnd" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="58c24b71-9512-483f-9899-510c68f782c7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés examinerExternalId" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="859ebfca-859f-41a5-980b-16f93f82f6ba" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés status" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:testCase id="68a17b8b-8d14-4692-99c6-e7bfda138c90" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Lekérdezés hibás status" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="69e8f484-a014-402a-922b-03bcb27b5248" name="Uj VJK"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="b39ee34b-5f3a-4bfe-87f2-49c0d07a939b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="76417e03-f8a7-4ce2-add2-d9ca113c65e4"><con:settings/><con:config><script> Random random = new Random()
+def randomNumber = random.nextInt(900000000)+100000000
+context["randomId"]=randomNumber</script></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="35bb4cf5-1084-4b2e-abdb-662ee0c40128"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamReport" methodName="Vizsgajegyzőkönyv létrehozása" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="b3e8fc7f-48c3-4c71-992a-d5d5f5be7d17" mediaType="application/json" postQueryString="false">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
           <con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request>{
   "examReportHeader": {
-    "examReportHeaderExternalId": "1122334456",
+    "examReportHeaderExternalId": "${=java.util.UUID.randomUUID()}",
     "location": "Kecskemet",
-    "registrationNumber": "AAA000",
-    "plannedEnd": "2021-11-11T12:00:00.000Z",
-    "plannedStart": "2021-11-11T11:00:00.000Z",
+    "registrationNumber": "BBB111",
+    "plannedEnd": "2021-11-13T12:00:00.000Z",
+    "plannedStart": "2021-11-13T11:00:00.000Z",
     "registerDocuments": true
   },
   "examReportLines": [
     {
-      "examReportLineExternalId": "1020304050",
-      "motherName": "Anyjaneve",
+      "examReportLineExternalId": "${=java.util.UUID.randomUUID()}",
+      "motherName": "Anyja neve",
       "documents": [
         {
-          "examReportLineDocumentExternalId": "111222333",
-          "identifier": "Abc123",
+          "examReportLineDocumentExternalId": "${=java.util.UUID.randomUUID()}",
+          "identifier": "Xyz987",
           "documentType": "utlevel",
           "courseExternalId": "4f6449b9-564a-4b6e-ac34-955ac6337e52"
         }
@@ -1631,18 +2079,18 @@
           "courseExternalId": "4f6449b9-564a-4b6e-ac34-955ac6337e52",
           "sni": 0,
           "ordinal": 0,
-          "title": "Kurzus Teszt",
+          "title": "Kurzus Teszt II.",
           "status": "ExamCourseWaitingForPreRegistration",
           "skipNexiusStartPage": true
         }
       ],
       "language": "Hungarian",
       "placeOfBirth": "Budapest",
-      "timeOfBirth": "2021-10-08T12:28:45.916Z",
-      "plannedStart": "2021-11-11T11:00:00.000Z",
+      "timeOfBirth": "2021-10-01T12:00:00.000Z",
+      "plannedStart": "2021-11-13T11:00:00.000Z",
       "surName": "Vezeteknev",
       "examStation": "Vizsgaallomas neve",
-      "userExternalId": "9988776655",
+      "userExternalId": "112233445566",
       "ordinal": 0
     }
   ]
@@ -1660,11 +2108,11 @@
         </con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties>
     <con:property>
       <con:name>examReportHeaderExternalId</con:name>
-      <con:value/>
+      <con:value>Vizsga-1_Külső_Id</con:value>
     </con:property>
     <con:property>
       <con:name>examReportLineExternalId</con:name>
-      <con:value/>
+      <con:value>Vizsga1_vizsgasor</con:value>
     </con:property>
     <con:property>
       <con:name>examDocumentExternalId</con:name>
@@ -1673,7 +2121,7 @@
       <con:name>examAssingmentExternalId</con:name>
       <con:value/>
     </con:property>
-  </con:properties>
+  <con:property><con:name>workstationId</con:name><con:value/></con:property><con:property><con:name>randomId</con:name><con:value>1234567890</con:value></con:property></con:properties>
   <con:wssContainer/>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>
