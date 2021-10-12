@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="8450220f-793b-4388-961b-0820083878d5" activeEnvironment="Default" name="SZEV" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="8450220f-793b-4388-961b-0820083878d5" activeEnvironment="Default" name="SZEV" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
   <con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:entry key="Report Format(s)" value=""/>
   <con:entry key="Host:Port" value=""/>
@@ -256,7 +256,9 @@
   "registrationNumber": "string",
   "plannedEnd": "2021-10-07T15:07:45.847Z",
   "plannedStart": "2021-10-07T15:07:45.847Z",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
+  
 }</con:request>
           <con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -1871,7 +1873,8 @@
   "registrationNumber": "ExamCenter_",
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -1895,7 +1898,8 @@
   "registrationNumber": "ExamCenter_",
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.examReportHeaderExternalId":["The JSON value could not be converted to System.String. Path: $.examReportHeaderExternalId | LineNumber: 1 | BytePositionInLine: 35."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -1919,7 +1923,8 @@
   "registrationNumber": "ExamCenter_",
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.examReportHeaderExternalId":["The JSON value could not be converted to System.String. Path: $.examReportHeaderExternalId | LineNumber: 1 | BytePositionInLine: 36."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -1943,7 +1948,8 @@
   "registrationNumber": "ExamCenter_",
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.examReportHeaderExternalId":["The JSON value could not be converted to System.String. Path: $.examReportHeaderExternalId | LineNumber: 1 | BytePositionInLine: 37."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -1967,9 +1973,10 @@
   "registrationNumber": "ExamCenter_",
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
-          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"examReportHeaderExternalId":["The ExamReportHeaderExternalId field is required.","Fejléc azonosító megadása kötelező!"]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
+          <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"examReportHeaderExternalId":["The ExamReportHeaderExternalId field is required.","A fejléc külső azonosító és a szakrendszer azonosító nem egyedi!"]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
           <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -1991,7 +1998,8 @@
   "registrationNumber": "ExamCenter_",
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.examReportHeaderExternalId":["The JSON value could not be converted to System.String. Path: $.examReportHeaderExternalId | LineNumber: 1 | BytePositionInLine: 33."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2015,7 +2023,8 @@
   "registrationNumber": "ExamCenter_",
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.examReportHeaderExternalId":["The JSON value could not be converted to System.String. Path: $.examReportHeaderExternalId | LineNumber: 1 | BytePositionInLine: 33."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2039,7 +2048,8 @@
   "registrationNumber": "ExamCenter_",
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.examReportHeaderExternalId":["The JSON value could not be converted to System.String. Path: $.examReportHeaderExternalId | LineNumber: 1 | BytePositionInLine: 37."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2063,7 +2073,8 @@
   "registrationNumber": "ExamCenter_",
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.examReportHeaderExternalId":["The JSON value could not be converted to System.String. Path: $.examReportHeaderExternalId | LineNumber: 1 | BytePositionInLine: 37."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2087,7 +2098,8 @@
   "registrationNumber": "ExamCenter_",
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.examReportHeaderExternalId":["The JSON value could not be converted to System.String. Path: $.examReportHeaderExternalId | LineNumber: 1 | BytePositionInLine: 37."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2111,7 +2123,8 @@
   "registrationNumber": "ExamCenter_",
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.examReportHeaderExternalId":["The JSON value could not be converted to System.String. Path: $.examReportHeaderExternalId | LineNumber: 1 | BytePositionInLine: 37."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2135,7 +2148,8 @@
   "registrationNumber": "ExamCenter_",
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.location":["The JSON value could not be converted to System.String. Path: $.location | LineNumber: 2 | BytePositionInLine: 15."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2159,7 +2173,8 @@
   "registrationNumber": "ExamCenter_",
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.location":["The JSON value could not be converted to System.String. Path: $.location | LineNumber: 2 | BytePositionInLine: 15."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2183,7 +2198,8 @@
   "registrationNumber": 123,
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.registrationNumber":["The JSON value could not be converted to System.String. Path: $.registrationNumber | LineNumber: 3 | BytePositionInLine: 27."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2207,7 +2223,8 @@
   "registrationNumber": null,
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="389684cb-bb71-46d3-a2e5-3958ef377fd7" name="JsonPath Match 3"><con:configuration><path>$..registrationNumber</path><content>[null]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2231,7 +2248,8 @@
   "registrationNumber": true,
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.registrationNumber":["The JSON value could not be converted to System.String. Path: $.registrationNumber | LineNumber: 3 | BytePositionInLine: 28."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2255,7 +2273,8 @@
   "registrationNumber": false,
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.registrationNumber":["The JSON value could not be converted to System.String. Path: $.registrationNumber | LineNumber: 3 | BytePositionInLine: 29."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2279,7 +2298,8 @@
   "registrationNumber": {"name":"John", "age":30, "city":"New York"},
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.registrationNumber":["The JSON value could not be converted to System.String. Path: $.registrationNumber | LineNumber: 3 | BytePositionInLine: 25."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2303,7 +2323,8 @@
   "registrationNumber": ["John", "Anna", "Peter"],
   "plannedEnd": "2021-10-13T10:00:00",
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.registrationNumber":["The JSON value could not be converted to System.String. Path: $.registrationNumber | LineNumber: 3 | BytePositionInLine: 25."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2327,7 +2348,8 @@
   "registrationNumber": "123",
   "plannedEnd": 123,
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.plannedEnd":["The JSON value could not be converted to System.DateTime. Path: $.plannedEnd | LineNumber: 4 | BytePositionInLine: 19."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2351,7 +2373,8 @@
   "registrationNumber": "123",
   "plannedEnd": null,
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.plannedEnd":["The JSON value could not be converted to System.DateTime. Path: $.plannedEnd | LineNumber: 4 | BytePositionInLine: 20."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2375,7 +2398,8 @@
   "registrationNumber": "123",
   "plannedEnd": true,
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.plannedEnd":["The JSON value could not be converted to System.DateTime. Path: $.plannedEnd | LineNumber: 4 | BytePositionInLine: 20."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2399,7 +2423,8 @@
   "registrationNumber": "123",
   "plannedEnd": false,
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.plannedEnd":["The JSON value could not be converted to System.DateTime. Path: $.plannedEnd | LineNumber: 4 | BytePositionInLine: 21."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2423,7 +2448,8 @@
   "registrationNumber": "123",
   "plannedEnd": {"asd": "124"},
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.plannedEnd":["The JSON value could not be converted to System.DateTime. Path: $.plannedEnd | LineNumber: 4 | BytePositionInLine: 17."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2447,7 +2473,8 @@
   "registrationNumber": "123",
   "plannedEnd": ["2021": "1014"],
   "plannedStart": "2021-10-09T15:00:00",
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.plannedEnd":["The JSON value could not be converted to System.DateTime. Path: $.plannedEnd | LineNumber: 4 | BytePositionInLine: 17."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2471,7 +2498,8 @@
   "registrationNumber": "123",
   "plannedEnd": "2021-10-09T15:00:00",
   "plannedStart": 123,
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.plannedStart":["The JSON value could not be converted to System.DateTime. Path: $.plannedStart | LineNumber: 5 | BytePositionInLine: 21."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2495,7 +2523,8 @@
   "registrationNumber": "123",
   "plannedEnd": "2021-10-09T15:00:00",
   "plannedStart":null,
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.plannedStart":["The JSON value could not be converted to System.DateTime. Path: $.plannedStart | LineNumber: 5 | BytePositionInLine: 21."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2519,7 +2548,8 @@
   "registrationNumber": "123",
   "plannedEnd": "2021-10-09T15:00:00",
   "plannedStart": true,
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.plannedStart":["The JSON value could not be converted to System.DateTime. Path: $.plannedStart | LineNumber: 5 | BytePositionInLine: 22."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2543,7 +2573,8 @@
   "registrationNumber": "123",
   "plannedEnd": "2021-10-09T15:00:00",
   "plannedStart": false,
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.plannedStart":["The JSON value could not be converted to System.DateTime. Path: $.plannedStart | LineNumber: 5 | BytePositionInLine: 23."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2567,7 +2598,8 @@
   "registrationNumber": "123",
   "plannedEnd": "2021-10-09T15:00:00",
   "plannedStart": {"asd": "124"},
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.plannedStart":["The JSON value could not be converted to System.DateTime. Path: $.plannedStart | LineNumber: 5 | BytePositionInLine: 19."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2591,7 +2623,8 @@
   "registrationNumber": "123",
   "plannedEnd":"2021-10-09T15:00:00",
   "plannedStart":  ["2021": "1014"],
-  "registerDocuments": true
+  "registerDocuments": true,
+  "start": "Automatic"
 }</con:request>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri><con:assertion type="JsonPath Match" id="7e8a5fce-8a52-42f2-9d9d-f01cfd0f663f" name="JsonPath Match"><con:configuration><path>$..errors</path><content>[{"$.plannedStart":["The JSON value could not be converted to System.DateTime. Path: $.plannedStart | LineNumber: 5 | BytePositionInLine: 20."]}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2cab73de-3bed-46a3-8e54-561ae256d081" name="JsonPath Match 1"><con:configuration><path>$..status</path><content>[400]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="74b18a6b-38b4-4c34-a0aa-1e67bb91498f" name="JsonPath Match 2"><con:configuration><path>$..title</path><content>[A mentés nem hajtható végre, az űrlap hibás adatokat tartalmaz.]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
@@ -2635,14 +2668,14 @@
           <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri>
-          <con:assertion type="JsonPath Match" id="58ae5c7c-b099-46cd-8327-3e6950787abd" name="JsonPath Match"><con:configuration><path>$..items.plannedEnd</path><content>[2021-10-20T18:00:00]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
+          <con:assertion type="JsonPath Match" id="58ae5c7c-b099-46cd-8327-3e6950787abd" name="JsonPath Match"><con:configuration><path>$..items.plannedEnd</path><content>[2021-10-13T10:00:00]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
           <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:jmsPropertyConfig/>
           <con:parameters>
   <con:entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612"/>
-  <con:entry key="plannedEnd" value="2021-10-20T18:00:00"/>
+  <con:entry key="plannedEnd" value="2021-10-13T10:00:00"/>
   <con:entry key="examReportHeaderExternalId" value="${#Project#examReportHeaderExternalId}"/>
 </con:parameters>
           <con:parameterOrder>
@@ -2660,7 +2693,7 @@
           <con:encoding>UTF-8</con:encoding><con:endpoint>https://szevnexius.northeurope.cloudapp.azure.com</con:endpoint>
           <con:request/>
           <con:originalUri>https://szevnexius.northeurope.cloudapp.azure.com/api/9fb37faa-1483-47a7-9192-033a2269a612/ExamReport/ExamReportHeaders</con:originalUri>
-          <con:assertion type="JsonPath Match" id="91e7721b-1499-478f-ac8c-028c52fb0747" name="JsonPath Match"><con:configuration><path>$..items.plannedStart</path><content>2021-10-20T08:00:00</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
+          <con:assertion type="JsonPath Match" id="91e7721b-1499-478f-ac8c-028c52fb0747" name="JsonPath Match"><con:configuration><path>$..items.plannedStart</path><content>[2021-10-09T15:00:00]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
           <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -2668,7 +2701,7 @@
           <con:parameters>
   <con:entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612"/>
   <con:entry key="examReportHeaderExternalId" value="${#Project#examReportHeaderExternalId}"/>
-  <con:entry key="plannedStart" value="2021-10-20T08:00:00"/>
+  <con:entry key="plannedStart" value="2021-10-09T15:00:00"/>
 </con:parameters>
           <con:parameterOrder>
             <con:entry>systemId</con:entry>
@@ -2692,7 +2725,7 @@
           <con:jmsPropertyConfig/>
           <con:parameters>
   <con:entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612"/>
-  <con:entry key="examinerExternalId" value="external_examiner_id_1"/>
+  <con:entry key="examinerExternalId" value="kitöltendo"/>
   <con:entry key="examReportHeaderExternalId" value="${#Project#examReportHeaderExternalId}"/>
 </con:parameters>
           <con:parameterOrder>
@@ -4399,7 +4432,7 @@
           <con:parameters>
             <entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612" xmlns="http://eviware.com/soapui/config"/>
           </con:parameters>
-        </con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Check Ultetes" id="b5c98df2-70f8-499f-a7d3-55c3aa3a345b"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamPreparation/SetSeating" methodName="Ültetés" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check VJK fejlec megnyitas" id="f61ed667-f0cd-4ec2-b247-70dcb2a785e3" mediaType="application/json" postQueryString="false">
+        </con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Check Ultetes" id="b5c98df2-70f8-499f-a7d3-55c3aa3a345b"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamPreparation/SetSeating" methodName="Ültetés" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check Ultetes" id="f61ed667-f0cd-4ec2-b247-70dcb2a785e3" mediaType="application/json" postQueryString="false">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
@@ -4419,7 +4452,7 @@
         </con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="040e6489-5800-43fa-8fd9-d43d1645f20f" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Check PUT endpoints" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:properties/></con:testCase><con:testCase id="48946772-ac4e-4eb1-9d4b-293a89b1b583" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Check PATCH endpoints" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:properties/></con:testCase><con:testCase id="db8a379e-c488-4d3e-a2f3-57e5d5062b2f" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Check DELETE endpoints" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties>
     <con:property>
       <con:name>examReportHeaderExternalId</con:name>
-      <con:value>Vizsga-1_Külső_Id</con:value>
+      <con:value>58db25a0-0933-426e-a4ec-6447556d3d1f</con:value>
     </con:property>
     <con:property>
       <con:name>examReportLineExternalId</con:name>
