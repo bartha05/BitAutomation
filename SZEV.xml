@@ -8,14 +8,14 @@
   <con:entry key="Save After" value="false"/>
   <con:entry key="Add Settings" value="false"/>
   <con:entry key="WSS Password Type" value=""/>
-  <con:entry key="TestSuite" value="Vizsgajegyzokony lekérdezése - /api/{systemId}/ExamReport/ExamReportHeaders"/>
+  <con:entry key="TestSuite" value="&lt;all>"/>
   <con:entry key="Endpoint" value=""/>
   <con:entry key="Select Report Type" value=""/>
   <con:entry key="System Properties" value=""/>
   <con:entry key="Password" value=""/>
   <con:entry key="Print Report" value="true"/>
   <con:entry key="Open Report" value="false"/>
-  <con:entry key="Export JUnit Results with test properties" value="true"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
   <con:entry key="Global Properties" value=""/>
   <con:entry key="Project Properties" value=""/>
   <con:entry key="Project Password" value=""/>
@@ -26,7 +26,7 @@
   <con:entry key="Environment" value="Default"/>
   <con:entry key="Coverage Report" value="false"/>
   <con:entry key="Enable UI" value="false"/>
-  <con:entry key="Root Folder" value="D:\Projektek\Reports"/>
+  <con:entry key="Root Folder" value="C:\munka\riports"/>
   <con:entry key="Ignore Errors" value="false"/>
   <con:entry key="Domain" value=""/>
   <con:entry key="Tool Args" value=""/>
@@ -4399,7 +4399,7 @@
           <con:parameters>
             <entry key="systemId" value="9fb37faa-1483-47a7-9192-033a2269a612" xmlns="http://eviware.com/soapui/config"/>
           </con:parameters>
-        </con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Check Ultetes" id="b5c98df2-70f8-499f-a7d3-55c3aa3a345b"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamPreparation/SetSeating" methodName="Ültetés" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check VJK fejlec megnyitas" id="f61ed667-f0cd-4ec2-b247-70dcb2a785e3" mediaType="application/json" postQueryString="false">
+        </con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Check Ultetes" id="b5c98df2-70f8-499f-a7d3-55c3aa3a345b"><con:settings/><con:config service="https://szevnexius.northeurope.cloudapp.azure.com" resourcePath="/api/{systemId}/ExamPreparation/SetSeating" methodName="Ültetés" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Check Ultetes" id="f61ed667-f0cd-4ec2-b247-70dcb2a785e3" mediaType="application/json" postQueryString="false">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-api-key" value="aaa123" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
